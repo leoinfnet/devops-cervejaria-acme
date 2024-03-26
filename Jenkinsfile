@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Initialize'){
            steps{
+                sh 'docker ps -a '
                 sh '''
                  echo "PATH = ${PATH}"
                  echo "M2_HOME = ${M2_HOME}"
@@ -22,6 +23,7 @@ pipeline {
                         sh 'mvn -DskipTests package'
                     }
                 }
+
     }
 
 }
