@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def mvnHome = tool 'M3'
 
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
