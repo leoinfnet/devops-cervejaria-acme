@@ -24,7 +24,7 @@ pipeline {
                 }
         stage('Copy'){
                     steps{
-                        sh 'cp *.jar /tmp/jenkins/'
+                        sh 'cp /var/jenkins_home/workspace/cervejaria-acme/target/cervejaria-acme-0.0.1-SNAPSHOT.jar /tmp/jenkins/cervejaria-acme-0.0.1-SNAPSHOT.jar'
                     }
                 }
 
