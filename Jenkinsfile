@@ -1,4 +1,4 @@
 node {
     checkout scm
-    sh echo "teste"
+    sh "mvn clean"
 }
