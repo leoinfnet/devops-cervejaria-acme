@@ -12,11 +12,16 @@ pipeline {
                 '''
             }
         }
-        stage('Build'){
+        stage('Clean'){
             steps{
-                echo 'Hello world'
+                sh 'mvn clean'
             }
         }
+        stage('Package'){
+                    steps{
+                        sh 'mvn -DskipTests package'
+                    }
+                }
     }
 
 }
