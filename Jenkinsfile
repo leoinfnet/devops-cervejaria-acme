@@ -24,14 +24,12 @@ pipeline {
                 script{
                     TAG_VERSION = sh(script: 'git rev-parse --short HEAD', returnStdout:true).trim()
                 }
-
-
-
             }
         }
         stage('Build') {
              steps{
                  sh "mvn -DskipTests clean package"
+
              }
              post{
                  success {
@@ -39,6 +37,7 @@ pipeline {
                  }
              }
          }
+
           stage('Create Image') {
              steps{
                  echo "IMAGE VERSION: ${TAG_VERSION}"

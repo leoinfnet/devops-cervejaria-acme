@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: cervejaria-acme
-          image: leogloriainfnet/cervejas-complete:latest
+          image: leogloriainfnet/acme-cervejaria:latest
           imagePullPolicy: Always
       restartPolicy: Always
       
